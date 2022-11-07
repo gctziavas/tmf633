@@ -17,7 +17,7 @@ import (
 )
 
 func main() {
-	log.Printf("Server started at http://0.0.0.0:8633")
+	log.Printf("TMF633 started.")
 
 	EventsSubscriptionApiService := tmf633.NewEventsSubscriptionApiService()
 	EventsSubscriptionApiController := tmf633.NewEventsSubscriptionApiController(EventsSubscriptionApiService)
