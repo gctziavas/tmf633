@@ -12,7 +12,6 @@ package tmf633
 import (
 	"context"
 	"errors"
-	"fmt"
 	"net/http"
 )
 
@@ -33,8 +32,6 @@ var serviceCatalogList []ServiceCatalog
 func (s *ServiceCatalogApiService) CreateServiceCatalog(ctx context.Context, serviceCatalog ServiceCatalog) (ImplResponse, error) {
 	// TODO - update CreateServiceCatalog with the required logic for this service method.
 	// Add api_service_catalog_service.go to the .openapi-generator-ignore to avoid overwriting this service implementation when updating open api generation.
-	fmt.Printf("%+v\n", serviceCatalog)
-
 	serviceCatalogList = append(serviceCatalogList, serviceCatalog)
 	//TODO: Uncomment the next line to return response Response(201, ServiceCatalog{}) or use other options such as http.Ok ...
 	return Response(201, ServiceCatalog{}), nil
@@ -57,7 +54,7 @@ func (s *ServiceCatalogApiService) CreateServiceCatalog(ctx context.Context, ser
 	//TODO: Uncomment the next line to return response Response(500, Error{}) or use other options such as http.Ok ...
 	//return Response(500, Error{}), nil
 
-	return Response(http.StatusNotImplemented, nil), errors.New("CreateServiceCatalog method not implemented")
+	//return Response(http.StatusNotImplemented, nil), errors.New("CreateServiceCatalog method not implemented")
 }
 
 // DeleteServiceCatalog - Deletes a ServiceCatalog
